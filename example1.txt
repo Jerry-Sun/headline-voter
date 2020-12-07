@@ -1,0 +1,148 @@
+[Command: python -u 'C:\Users\Jerry\Documents\Programming\Python\Personal Projects\MediaStack API\MediaStack_API.py']
+{'data': [{'author': None,
+           'category': 'business',
+           'country': 'us',
+           'description': 'Coronavirus latest: UK to allow limited return of '
+                          'fans to big sporting events from December 2',
+           'image': None,
+           'language': 'en',
+           'published_at': '2020-11-23T20:47:15+00:00',
+           'source': 'Financial Times',
+           'title': 'Coronavirus latest: UK to allow limited return of fans to '
+                    'big sporting events from December 2',
+           'url': 'https://www.ft.com/content/e2d0103a-f54e-385f-a391-21bb8d0b1eae'},
+          {'author': None,
+           'category': 'business',
+           'country': 'us',
+           'description': 'Coronavirus latest: UK to allow limited return of '
+                          'fans to big sporting events from December 2',
+           'image': None,
+           'language': 'en',
+           'published_at': '2020-11-23T20:47:15+00:00',
+           'source': 'Financial Times',
+           'title': 'Coronavirus latest: UK to allow limited return of fans to '
+                    'big sporting events from December 2',
+           'url': 'https://www.ft.com/content/e2d0103a-f54e-385f-a391-21bb8d0b1eae'},
+          {'author': 'Jonathan Shieber',
+           'category': 'technology',
+           'country': 'us',
+           'description': 'Lunewave, the Arizona-based startup developing a '
+                          'novel technology for radars for autonomous '
+                          'vehicles, has raised $7 million in financing as it '
+                          'gets ready for the commercial rollout of its '
+                          'systems. The company&#8217;s latest financing came '
+                          'from Proeza entures, Blue 9 Capital, Tsingyuan '
+                          'Ventures and Intact Ventures, the company said. '
+                          'With the latest funding Lunewave will [&#8230;]',
+           'image': None,
+           'language': 'en',
+           'published_at': '2020-11-23T20:47:07+00:00',
+           'source': 'TechCrunch',
+           'title': 'Approaching commercialization for its autonomous radar '
+                    'nav system, Lunewave raises $7 million',
+           'url': 'https://techcrunch.com/2020/11/23/approaching-commercialization-for-its-autonomous-radar-nav-system-lunewave-raises-7-million/'},
+          {'author': 'Business Wire',
+           'category': 'business',
+           'country': 'us',
+           'description': 'NEW YORK & MEXICO CITY &#8212; International '
+                          'Dispensing (IDC) (ticker OTC:IDND) has announced '
+                          'that it has entered into a strategic alliance with '
+                          'ALPLA Group, a multinational packaging company '
+                          'headquartered in Austria with annual revenues of '
+                          'approximately $4.5 billion. As the first stage of '
+                          'the strategic alliance, IDC is in the process of '
+                          'transitioning its manufacturing [&#8230;]',
+           'image': None,
+           'language': 'en',
+           'published_at': '2020-11-23T20:45:12+00:00',
+           'source': 'Financial Post | Canada Business News',
+           'title': 'IDC Signs Strategic Alliance with ALPLA',
+           'url': 'https://financialpost.com/pmn/press-releases-pmn/business-wire-news-releases-pmn/idc-signs-strategic-alliance-with-alpla'},
+          {'author': 'Tristan Greene',
+           'category': 'technology',
+           'country': 'us',
+           'description': 'The setup�s hilarious: Two park rangers hiding '
+                          'behind a tree pointing a camera at a bear in the '
+                          'distance so they can use facial recognition '
+                          'software to determine if they�ve actually found the '
+                          'infamous picnic-basket-snatching ursus known as '
+                          'Yogi. But this is no joke. Research groups across '
+                          'the world are turning to image recognition AI, the '
+                          'same kind used for human facial recognition and '
+                          'identification, to solve problems in the animal '
+                          'kingdom. Ranchers use facial recognition software '
+                          'to try and track down problems with their livestock '
+                          '� think of it like contact-tracing for cows. And '
+                          'biologists use it to identify&#8230; This story '
+                          'continues at The Next Web',
+           'image': 'https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/11/wantedposter_animals-796x417.jpg',
+           'language': 'en',
+           'published_at': '2020-11-23T20:41:17+00:00',
+           'source': 'The Next Web',
+           'title': 'We should hold animals accountable for their crimes. '
+                    'Here�s how AI can help',
+           'url': 'http://feedproxy.google.com/~r/TheNextWeb/~3/SUKA1Z8Brw4/'},
+          {'author': 'Reuters',
+           'category': 'business',
+           'country': 'us',
+           'description': 'Biden to name Kerry as U.S. climate envoy, '
+                          "emphasizing diplomacy's role in the fight",
+           'image': 'https://i-invdn-com.akamaized.net/trkd-images/LYNXMPEGAM1B7_L.jpg',
+           'language': 'en',
+           'published_at': '2020-11-23T20:40:38+00:00',
+           'source': 'Investing.com | Stock Market Quotes &amp; Financial News',
+           'title': 'Biden to name Kerry as U.S. climate envoy, emphasizing '
+                    "diplomacy's role in the fight",
+           'url': 'https://www.investing.com/news/commodities-news/biden-to-name-kerry-as-us-climate-czar-emphasizing-diplomacys-role-in-the-fight-2354346'},
+          {'author': 'Reuters',
+           'category': 'business',
+           'country': 'us',
+           'description': 'Biden to pick ex-Fed chair Yellen for Treasury '
+                          'secretary: WSJ',
+           'image': 'https://i-invdn-com.akamaized.net/trkd-images/LYNXMPEGAM1FD_L.jpg',
+           'language': 'en',
+           'published_at': '2020-11-23T20:40:22+00:00',
+           'source': 'Investing.com | Stock Market Quotes &amp; Financial News',
+           'title': 'Biden to pick ex-Fed chair Yellen for Treasury secretary: '
+                    'WSJ',
+           'url': 'https://www.investing.com/news/politics/biden-to-pick-exfed-chair-yellen-for-treasury-secretary-wsj-2354397'},
+          {'author': 'Cointelegraph',
+           'category': 'business',
+           'country': 'us',
+           'description': 'Election dilemma: Putting data on blockchain '
+                          'doesn�t mean it�s correct',
+           'image': 'https://d1-invdn-com.akamaized.net/content/pic427b739b79ff61256fd6df86b521956d.jpg',
+           'language': 'en',
+           'published_at': '2020-11-23T20:40:17+00:00',
+           'source': 'Investing.com | Stock Market Quotes &amp; Financial News',
+           'title': 'Election dilemma: Putting data on blockchain doesn�t mean '
+                    'it�s correct',
+           'url': 'https://www.investing.com/news/cryptocurrency-news/election-dilemma-putting-data-on-blockchain-doesnt-mean-its-correct-2354416'},
+          {'author': 'Tim Ingham',
+           'category': 'business',
+           'country': 'us',
+           'description': "Firm's $10m acquisition of Repost Network last year "
+                          'appears to be paying off\n'
+                          'Source',
+           'image': None,
+           'language': 'en',
+           'published_at': '2020-11-23T20:38:24+00:00',
+           'source': 'Music Business Worldwide',
+           'title': 'SoundCloud�s revenues jumped 37% to $166m in 2019 � and '
+                    'it�s just posted its first ever profitable quarter',
+           'url': 'https://www.musicbusinessworldwide.com/soundcloud-revenues-soared-by-37-in-2019-and-its-just-posted-its-first-profitable-quarter/'},
+          {'author': 'Gabriel Friedman',
+           'category': 'business',
+           'country': 'us',
+           'description': 'Health of retail sector in question as a second '
+                          'wave of COVID-19 threatens to exact a serious toll '
+                          'on economy',
+           'image': None,
+           'language': 'en',
+           'published_at': '2020-11-23T20:37:52+00:00',
+           'source': 'Financial Post | Canada Business News',
+           'title': 'E-commerce may not be enough to save small retailers from '
+                    'being decimated during curtailed holiday season',
+           'url': 'https://financialpost.com/entrepreneur/small-business/e-commerce-may-not-be-enough-to-save-small-retailers-from-being-decimated-during-curtailed-holiday-season'}],
+ 'pagination': {'count': 10, 'limit': 10, 'offset': 0, 'total': 81603}}
+[Finished in 3.335s]
