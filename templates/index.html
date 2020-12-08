@@ -10,11 +10,9 @@
         <h1>MediaStack API Headlines</h1>
         <hr> 
         <ul>
-            {% for mainKey in data.keys() %}
-                {% if mainKey == "data"}
-                    {% for k, v in data[mainKey].iteritems() %}
-                    <li>{{v}}</li>
-                    {% endfor %}
+            {% for k, v in data[1] %}
+                {% if k is "title"}
+                <li>{{v}}</li>
                 {% endif %}
             {% endfor %}
         </ul>
