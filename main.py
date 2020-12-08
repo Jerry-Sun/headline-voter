@@ -1,12 +1,15 @@
 from typing import Optional
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
+from fastapi.responses import HTMLResponse
+from fastapi.templating import Jinja2Templates
 import pprint, json, requests
 
 app = FastAPI()
-with open("example2.json", "r") as f: 
-    data = f.read()
+templates = Jinja2Templates(directory="templates")
 
+# with open("example2.json", "r") as f: 
+#     data = f.read()
 
 @app.get("/")
-async def get_headlines():
-    return {data}
+async def get_headlines(request: Request):
+    return templates.TemplateResponse("index.html", {"request": request})
