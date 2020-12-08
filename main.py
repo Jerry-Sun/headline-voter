@@ -7,9 +7,14 @@ import pprint, json, requests
 app = FastAPI()
 templates = Jinja2Templates(directory="templates")
 
-# with open("example2.json", "r") as f: 
-#     data = f.read()
+with open("example2.json", "r") as f: 
+    data = f.read()
 
-@app.get("/")
+# @app.get("/")
+# async def homepage(request: Request):
+#     return templates.TemplateResponse("index.html", {"request": request})
+
+@app.route("/jinja")
 async def get_headlines(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request})
+    return templates.TemplateResponse("index.html", {"request": request, "headlines":data})
+   

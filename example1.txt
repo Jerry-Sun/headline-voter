@@ -1,4 +1,3 @@
-[Command: python -u 'C:\Users\Jerry\Documents\Programming\Python\Personal Projects\MediaStack API\MediaStack_API.py']
 {'data': [{'author': None,
            'category': 'business',
            'country': 'us',
@@ -145,4 +144,3 @@
                     'being decimated during curtailed holiday season',
            'url': 'https://financialpost.com/entrepreneur/small-business/e-commerce-may-not-be-enough-to-save-small-retailers-from-being-decimated-during-curtailed-holiday-season'}],
  'pagination': {'count': 10, 'limit': 10, 'offset': 0, 'total': 81603}}
-[Finished in 3.335s]
