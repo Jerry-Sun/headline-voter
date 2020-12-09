@@ -1,6 +1,5 @@
-{% extends "public_template.html" %}
 
-{%block title%}Home{% endblock %}
+{%block title%}Home{% endblock title %}
 
 {% block main %}
 
@@ -10,10 +9,8 @@
         <h1>MediaStack API Headlines</h1>
         <hr> 
         <ul>
-            {% for k, v in data[1] %}
-                {% if k is "title"}
-                <li>{{v}}</li>
-                {% endif %}
+            {% for item in headlines %}
+            <li>{{item.title}}</li>
             {% endfor %}
         </ul>
 

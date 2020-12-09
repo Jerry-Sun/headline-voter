@@ -10,11 +10,13 @@ templates = Jinja2Templates(directory="templates")
 with open("example2.json", "r") as f: 
     data = f.read()
 
-# @app.get("/")
-# async def homepage(request: Request):
-#     return templates.TemplateResponse("index.html", {"request": request})
+#@app.get("/")
+#async def homepage(request: Request):
+#    return templates.TemplateResponse("index.html", {"request": request})
 
-@app.route("/jinja")
+@app.get("/jinja")
 async def get_headlines(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request, "headlines":data})
+#    print(data["data"])
+#    print(data[1])
+    return templates.TemplateResponse("index.html", {"request": request, "headlines": data})
    
