@@ -8,7 +8,7 @@ app = FastAPI()
 templates = Jinja2Templates(directory="templates")
 
 with open("example2.json", "r") as f: 
-    data = f.read()
+    data = json.loads(f.read())
 
 #@app.get("/")
 #async def homepage(request: Request):
@@ -18,5 +18,5 @@ with open("example2.json", "r") as f:
 async def get_headlines(request: Request):
 #    print(data["data"])
 #    print(data[1])
-    return templates.TemplateResponse("index.html", {"request": request, "headlines": data})
+    return templates.TemplateResponse("index.html", {"request": request, "headlines": data["data"]})
    
