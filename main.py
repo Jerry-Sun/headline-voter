@@ -24,10 +24,10 @@ PARAMS = {
     "sort" : "published_desc",
     "limit" : 10,
 }
-"""
 
 r = requests.get(url, params = PARAMS)
 response = r.json()
+"""
 
 # Homepage when you visit the localhost site
 @app.get("/")
