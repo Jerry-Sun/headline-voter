@@ -4,23 +4,46 @@
 
 {% block main %}
 
-<div class="container">
-    <div class="row">
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    
+    <body>
+        
+        <div class="ui container">
+            <h1>Headlines</h1>
+            <div class="ui divided items">
+                {% for headline in headlines %}
+                <div class="item">
+                    <div class="ui icon vertical basic buttons">
+                        <button class="ui button"><i class="green thumbs up outline icon"></i></button>
+                        <button class="ui button"><i class="red thumbs down outline icon"></i></button>
+                    </div>
+                    <div class="ui container">
+                        <div class="content">
+                            <h3 class="header">{{ headline.title }}</h3>
+                            <div class="meta">
+                              <span class="cinema">{{ headline.source}}</span>
+                            </div>
+                            <div class="description">
+                              <p>{{ headline.description }}</p>
+                            </div>
+                            <div class="extra">
+                              <div class="ui label">{{ headline.category }}</div>
+                              <div class="ui label">{{ headline.language }}</div>
+                            </div>
+                          </div>
 
-        <h1>Headlines</h1>
-        <hr> 
-        <ul>
-            {% for item in headlines %}
-            {{item.title}}
-            <br>
-            {{item.published_at}}
-            <br>
-            {{item.description}}
-            <br>
-            {{item.source}}
-            <br>
-            {{item.category}}
-            {% endfor %}
-        </ul>
+                    </div>
+                  
+                </div>
+                {% endfor %}
+              </div>
+        </div>
+        </body>
+    </head>
+</html>
 
-{% endblock main %}
+{% endblock %}

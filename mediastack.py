@@ -13,4 +13,4 @@ PARAMS = {
 
 r = requests.get(url, params = PARAMS)
 data = r.json()
-pprint.pprint(data)
+json.dumps(data, "filename")
