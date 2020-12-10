@@ -11,7 +11,15 @@
         <hr> 
         <ul>
             {% for item in headlines %}
-            <li>{{item.title}}</li>
+            {{item.title}}
+            <br>
+            {{item.published_at}}
+            <br>
+            {{item.description}}
+            <br>
+            {{item.source}}
+            <br>
+            {{item.category}}
             {% endfor %}
         </ul>
 
