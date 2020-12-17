@@ -11,23 +11,22 @@ templates = Jinja2Templates(directory="templates")
 with open("example2.json", "r") as f: 
    response = json.loads(f.read())
 
-"""
+
 # Commenting this section out so it doesn't overwrite the monthly API pull limit
+#url = "http://api.mediastack.com/v1/news"
 
-url = "http://api.mediastack.com/v1/news"
+#PARAMS = {
+#    "access_key" : "ab0622cf5843c7ae44b724303b6ef796",
+#    "categories": "business, technology, -entertainment",
+#    "countries" : "us",
+#    "languages" : "en",
+#    "sort" : "published_desc",
+#    "limit" : 10,
+#}
 
-PARAMS = {
-    "access_key" : "ab0622cf5843c7ae44b724303b6ef796",
-    "categories": "business, technology, -entertainment",
-    "countries" : "us",
-    "languages" : "en",
-    "sort" : "published_desc",
-    "limit" : 10,
-}
+#r = requests.get(url, params = PARAMS)
+#response = r.json()
 
-r = requests.get(url, params = PARAMS)
-response = r.json()
-"""
 
 # Homepage when you visit the localhost site
 @app.get("/")
