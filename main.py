@@ -2,6 +2,7 @@ from typing import Optional
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
+from pydantic import BaseModel
 import pprint, json, requests
 
 app = FastAPI()
@@ -19,7 +20,6 @@ with open("example2.json", "r") as f:
 #    "access_key" : "ab0622cf5843c7ae44b724303b6ef796",
 #    "categories": "business, technology, -entertainment",
 #    "countries" : "us",
-#    "languages" : "en",
 #    "sort" : "published_desc",
 #    "limit" : 10,
 #}
@@ -39,4 +39,13 @@ async def get_headlines(request: Request):
 #    print(response["data"])
 #    print(response[1])
     return templates.TemplateResponse("index.html", {"request": request, "headlines": response["data"]})
+
+
+@app.post("/vote")
+async def test():
+    # TODO: add titles to dictionary when button is clicked
+    # TODO: initialize as 1 or -1, then +1 or -1 depending on clicks
+    print("Received message")
+    # don't need to return anything (?) 
+    return "Response received"
    
