@@ -27,6 +27,13 @@ with open("example2.json", "r") as f:
 #r = requests.get(url, params = PARAMS)
 #response = r.json()
 
+#create the dictionary that will track headlines and their corresponding count
+tracker_dict = {}
+
+#receive the FE click event data from index.html 
+class Vote(BaseModel): 
+    headline: str
+    direction: int
 
 # Homepage when you visit the localhost site
 @app.get("/")
@@ -40,12 +47,15 @@ async def get_headlines(request: Request):
 #    print(response[1])
     return templates.TemplateResponse("index.html", {"request": request, "headlines": response["data"]})
 
-
+# TODO: add titles to dictionary when button is clicked
+# TODO: initialize as 1 or -1, then +1 or -1 depending on clicks
 @app.post("/vote")
-async def test():
-    # TODO: add titles to dictionary when button is clicked
-    # TODO: initialize as 1 or -1, then +1 or -1 depending on clicks
+async def test(item: Vote):
+    hashed_headline = hash(item.headline)
+    if tracker_dict.__contains__(hashed_headline): 
+        tracker_dict[hashed_headline] += item.direction
+    else: 
+        tracker_dict[hashed_headline] = item.direction
     print("Received message")
-    # don't need to return anything (?) 
-    return "Response received"
+    # return "Response received"
    

@@ -11,16 +11,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"
     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
-  <script>
-    function handleVoteClick(event) {
-      console.log('test');
-      fetch('/vote', { 
-        method: 'POST' });
-      // path parameter to send headline.title to BE
-    }
-  </script>
+  
 <body>
   <div class="ui container">
     <h1>Headlines</h1>
@@ -28,8 +21,8 @@
       {% for headline in headlines %}
       <div class="item" x-data="{ count : 0 }">
         <div class="ui icon vertical basic buttons">
-          <button class="ui button" x-on:click="handleVoteClick($event)"><i class="green thumbs up outline icon"></i></button>
-          <button class="ui button" x-on:click="handleVoteClick($event)"><i class="red thumbs down outline icon"></i></button>
+          <button class="ui button" x-on:click="handleVoteClick($event)" data-headline="{{ headline.title }}" data-direction="1"><i class="green thumbs up outline icon"></i></button>
+          <button class="ui button" x-on:click="handleVoteClick($event)" data-headline="{{ headline.title }}" data-direction="-1"><i class="red thumbs down outline icon"></i></button>
         </div>
         <div class="ui container">
           <div class="content">
@@ -47,11 +40,29 @@
           </div>
         </div>
         <div class="extra">
-          <div class="ui grey large basic label">
+          <div id = input class="ui grey large basic label">
             <span x-text="count"></span>
           </div>
         </div>
       </div>
+      <script>
+        function handleVoteClick(event) {
+  
+          console.log(event.target.dataset.headline)
+          console.log(event.target.dataset.direction)
+
+          var score = { 
+            headline : event.target.dataset.headline,
+            direction : event.target.dataset.direction
+          };
+
+          console.log('test');
+          fetch('/vote', { 
+            method: 'POST',
+            body: JSON.stringify(score)
+          })
+        }
+      </script>
       {% endfor %}
       <div class="ui container">
       </div>
