@@ -38,9 +38,9 @@ def get_db():
     finally: 
         db.close()
 
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
+# @app.get("/")
+# async def root():
+#     return {"message": "Hello World"}
 
 # Homepage when you visit the localhost site
 @app.get("/")
