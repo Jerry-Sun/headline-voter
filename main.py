@@ -30,13 +30,13 @@ PARAMS = {
 r = requests.get(url, params = PARAMS)
 response = r.json()
 
-# # dependency
-# def get_db(): 
-#     try: 
-#         db = SessionLocal()
-#         yield db
-#     finally: 
-#         db.close()
+# dependency
+def get_db(): 
+    try: 
+        db = SessionLocal()
+        yield db
+    finally: 
+        db.close()
 
 @app.get("/")
 async def root():
