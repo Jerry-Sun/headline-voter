@@ -7,3 +7,5 @@ node_modules/alpinejs
 # Test Code
 print_sample.py
 package-lock.json
+
+*.db

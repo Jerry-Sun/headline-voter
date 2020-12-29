@@ -19,10 +19,10 @@
     <h1>Headlines</h1>
     <div class="ui divided items" style="width:450%;">
       {% for headline in headlines %}
-      <div class="item" x-data="{ count : 0 }">
+      <div class="item" x-data="{ count : {{ headline.score }} }">
         <div class="ui icon vertical basic buttons">
-          <button class="ui button" x-on:click="handleVoteClick($event)" data-headline="{{ headline.title }}" data-direction="1"><i class="green thumbs up outline icon"></i></button>
-          <button class="ui button" x-on:click="handleVoteClick($event)" data-headline="{{ headline.title }}" data-direction="-1"><i class="red thumbs down outline icon"></i></button>
+          <button class="ui button" x-on:click="handleVoteClick($event); count++" data-headline="{{ headline.title }}" data-direction="1"><i class="green thumbs up outline icon"></i></button>
+          <button class="ui button" x-on:click="handleVoteClick($event); count--" data-headline="{{ headline.title }}" data-direction="-1"><i class="red thumbs down outline icon"></i></button>
         </div>
         <div class="ui container">
           <div class="content">
@@ -47,16 +47,15 @@
       </div>
       <script>
         function handleVoteClick(event) {
-  
-          console.log(event.target.dataset.headline)
-          console.log(event.target.dataset.direction)
 
+            
+          console.log(event.currentTarget)
+          
           var score = { 
-            headline : event.target.dataset.headline,
-            direction : event.target.dataset.direction
+            headline : event.currentTarget.dataset.headline,
+            direction : event.currentTarget.dataset.direction
           };
 
-          console.log('test');
           fetch('/vote', { 
             method: 'POST',
             body: JSON.stringify(score)
