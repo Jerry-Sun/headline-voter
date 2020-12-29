@@ -4,7 +4,6 @@ from pydantic import BaseModel
 from sqlalchemy.orm import Session
 from database import SessionLocal, engine
 from schema import Vote
-from ratelimit import limits
 import pprint, json, requests, database, models, schema, hashlib
 
 app = FastAPI()
